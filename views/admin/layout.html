@@ -1,0 +1,36 @@
+<!--layout.art-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>{{block 'title'}}KoaCms内容管理系统{{/block}}</title>
+    <meta name="keywords" content="KoaCms内容管理系统" />
+    <meta name="description" content="KoaCms内容管理系统" />
+    <meta name="viewport" content="KoaCms内容管理系统" /> {{block 'head'}}
+    <link href="{{__HOST__}}/admin/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{__HOST__}}/admin/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="{{__HOST__}}/admin/css/ace.min.css" />
+    <link rel="stylesheet" href="{{__HOST__}}/admin/css/ace-rtl.min.css" />
+    <link rel="stylesheet" href="{{__HOST__}}/admin/css/ace-skins.min.css" />
+    <script src="{{__HOST__}}/admin/js/ace-extra.min.js"></script> {{/block}}
+</head>
+
+<body>
+    {{block 'content'}}{{/block}}
+</body>
+
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='{{__HOST__}}/admin/js/jquery-2.0.3.min.js'>" + "<" + "script>");
+</script>
+<script type="text/javascript">
+    if ("ontouchend" in document) document.write("<script src='{{__HOST__}}/admin/js/jquery.mobile.custom.min.js'>" +
+        "<" +
+        "script>");
+</script>
+<script src="{{__HOST__}}/admin/js/bootstrap.min.js"></script>
+<!-- ace scripts -->
+<script src="{{__HOST__}}/admin/js/ace-elements.min.js"></script>
+<script src="{{__HOST__}}/admin/js/ace.min.js"></script>
+
+</html>

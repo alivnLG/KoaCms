@@ -1,4 +1,9 @@
 ﻿{{extend 'admin/layout.html'}} {{block 'content'}} {{include "admin/public/navtop.html"}}
+<style>
+  .form-horizontal .form-group {
+    height: 44px;
+  }
+</style>
 <div class="main-container" id="main-container">
   <script type="text/javascript">
     try {
@@ -104,7 +109,7 @@
   </a>
 </div>
 <!-- /.main-container -->
-{{include "admin/public/footer.html"}}
+{{/block}} {{block 'zdyJS'}}
 <script type="text/javascript">
   $(function () {
     function showErrorAlert(reason, detail) {

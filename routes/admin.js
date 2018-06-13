@@ -8,8 +8,16 @@ var user = require('./admin/user');
 
 router.use(async (ctx,next) => {
     ctx.state.__HOST__="http://"+ctx.request.header.host;
-    console.log(ctx.state.__HOST__)
-    next();
+    if(ctx.session.userinfo){
+      await next();
+    }
+    else{
+      if(ctx.request.url=="/admin/login" || ctx.request.url=="/admin/login/doLogin"){
+        await next();
+      }else{
+        ctx.redirect("/admin/login");
+      }
+    }
 });
 
 router.get("/", async (ctx) => {
